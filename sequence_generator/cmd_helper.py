@@ -10,4 +10,6 @@ def defineArguments(parser):
     parser.add_argument("--deletion_rate", type=float, default=0.005, help="Postotak brisanja (default: 0.005)")
     parser.add_argument("--mean_length", type=int, default=150, help="Prosječna duljina očitanja (default: 150)")
     parser.add_argument("--stddev_length", type=int, default=15, help="Standardna devijacija duljine očitanja (default: 15)")
+    parser.add_argument('--technology', default = 'Standard', choices=['PacBio', 'Illumina', 'ONT', 'Standard'], help="Tehnologija korištena za dobivanje sekvenci: PacBio - Sequel II System - HiFi reads, ONT - PromethION with R10.4 Flow Cells")
+    
     
