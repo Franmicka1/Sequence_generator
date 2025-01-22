@@ -1,0 +1,21 @@
+{
+  "technologies": {
+    "PacBio": {
+      "error_profile": {"substitution": 0.01, "insertion": 0.03, "deletion": 0.06},
+      "error_distribution": "normal",
+	  "error_mean": 0.1,
+	  "error_std_dev": 0.05,
+      "read_length_distribution": "lognormal",
+	  "read_mean": 5,
+	  "read_stddev": 0.5
+    },
+    "ONT": {
+      "error_profile": {"substitution": 0.05, "insertion": 0.05, "deletion": 0.05},
+      "error_distribution": "normal",
+	  "error_mean": 0.1,
+	  "error_std_dev": 0.05,
+      "read_length_distribution": "exponential",
+	  "read_mean": 7500
+    }	
+  }
+}

@@ -5,11 +5,12 @@ def defineArguments(parser):
     parser.add_argument("reference", type=str, help="FASTA datoteka s referencom")
     parser.add_argument("num_reads", type=int, help="Broj očitanja koja će se generirati")
     parser.add_argument("output_fastq", type=str, help="Izlazna FASTQ datoteka za generirana očitanja")
-    parser.add_argument("--substitution_rate", type=float, default=0.01, help="Postotak zamjena (default: 0.01)")
-    parser.add_argument("--insertion_rate", type=float, default=0.005, help="Postotak umetanja (default: 0.005)")
-    parser.add_argument("--deletion_rate", type=float, default=0.005, help="Postotak brisanja (default: 0.005)")
-    parser.add_argument("--mean_length", type=int, default=150, help="Prosječna duljina očitanja (default: 150)")
-    parser.add_argument("--stddev_length", type=int, default=15, help="Standardna devijacija duljine očitanja (default: 15)")
-    parser.add_argument('--technology', default = 'Standard', choices=['PacBio', 'Illumina', 'ONT', 'Standard'], help="Tehnologija korištena za dobivanje sekvenci: PacBio - Sequel II System - HiFi reads, ONT - PromethION with R10.4 Flow Cells")
+    parser.add_argument("--num_chim_reads", type=float, default=0.05, help="Postotak chimeric ocitanja")
+    parser.add_argument("--substitution_rate", type=float, help="Postotak zamjena")
+    parser.add_argument("--insertion_rate", type=float, help="Postotak umetanja")
+    parser.add_argument("--deletion_rate", type=float, help="Postotak brisanja")
+    parser.add_argument("--read_mean", type=int, help="Prosječna duljina očitanja")
+    parser.add_argument("--read_stddev", type=int, help="Standardna devijacija duljine očitanja")
+    parser.add_argument('--technology', default = 'PacBio', choices=['PacBio', 'Illumina', 'ONT'], help="Tehnologija korištena za dobivanje sekvenci: PacBio - Sequel II System - HiFi reads, ONT - PromethION with R10.4 Flow Cells")
     
     
